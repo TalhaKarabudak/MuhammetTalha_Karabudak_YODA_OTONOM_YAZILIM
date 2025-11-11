@@ -1,5 +1,4 @@
 class Hesap:
-    """Basit bir banka hesabı sınıfı."""
 
     def __init__(self, ad_soyad, hesap_numarasi, baslangic_bakiye=0):
         self.ad_soyad = ad_soyad
@@ -8,7 +7,6 @@ class Hesap:
         print(f"Yeni Hesap Oluşturuldu: {self.ad_soyad}, Hesap No: {self.hesap_numarasi}")
 
     def bakiye_goruntule(self):
-        """Hesabın mevcut bakiyesini ekrana yazdırır."""
         print(f"\n--- Bakiye Sorgulama ---")
         print(f"Hesap Sahibi: {self.ad_soyad}")
         print(f"Güncel Bakiye: {self.bakiye:.2f} TL")
@@ -16,7 +14,6 @@ class Hesap:
         return self.bakiye
 
     def para_yatir(self, miktar):
-        """Hesaba para yatırır."""
         if miktar > 0:
             self.bakiye += miktar
             print(f"{miktar:.2f} TL yatırıldı. Yeni bakiye: {self.bakiye:.2f} TL.")
@@ -26,7 +23,6 @@ class Hesap:
             return False
 
     def para_cek(self, miktar):
-        """Hesaptan para çeker, bakiye yeterli değilse hata verir."""
         if miktar <= 0:
             print("Hata: Çekilecek miktar pozitif olmalıdır.")
             return False
